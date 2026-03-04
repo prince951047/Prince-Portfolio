@@ -1,0 +1,284 @@
+{
+  "basics": {
+    "name": "PRINCE PATEL",
+    "title": "Cloud, DevOps & Cybersecurity Enthusiast | DevSecOps Engineer",
+    "summary": "DevOps Engineer with 2+ years of experience in cloud infrastructure, automation, and CI/CD across AWS, Azure, GCP, OCI, and Alibaba Cloud. Strong focus on DevSecOps and cybersecurity, integrating security, IAM, and best practices into automated deployment pipelines. Hands-on experience in cloud cost optimization, monitoring, and reliability, ensuring scalable and secure systems. Passionate about automation, continuous improvement, and building cloud-agnostic, resilient platforms.",
+    "location": "Ahmedabad 382470, INDIA",
+    "email": "prince.patel.2903@gmail.com",
+    "phone": "+91 9510476266",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/prince-patel-287717220"
+      },
+      { "name": "GitHub", "url": "https://github.com" },
+      { "name": "QwikLabs", "url": "https://qwiklabs.com" },
+      { "name": "Certifications", "url": "#" }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Prama Innovation India Private Limited",
+      "role": "DevOps Engineer",
+      "dates": "July 2024 - Current",
+      "location": "Ahmedabad, India",
+      "bullets": [
+        "Designed and automated multi-cloud infrastructure using Terraform across AWS, Azure, and GCP.",
+        "Built and maintained CI/CD pipelines using GitHub Actions, GitLab CI, Jenkins, and Azure DevOps.",
+        "Implemented Kubernetes-based deployments using Docker, Helm, and GKE/AKS/EKS.",
+        "Integrated monitoring and logging using Prometheus, Grafana, and CloudWatch.",
+        "Worked closely with developers to optimize deployment workflows and improve system reliability."
+      ]
+    },
+    {
+      "company": "atQor (BITSCAPE)",
+      "role": "Cloud Engineer",
+      "dates": "Jan 2024 – June 2024",
+      "location": "Ahmedabad, India",
+      "bullets": [
+        "Administered and managed Azure cloud environments, including Microsoft 365 Admin Center and SharePoint Admin Center, ensuring secure access control and operational stability.",
+        "Automated cloud infrastructure provisioning and configuration using Terraform and scripting, reducing manual effort and improving deployment consistency.",
+        "Implemented containerization using Docker to streamline application deployment and environment standardization.",
+        "Optimized AWS cloud services for performance, scalability, and security, following cloud best practices.",
+        "Collaborated with cross-functional teams using JIRA to track tasks, manage sprints, and deliver cloud automation initiatives efficiently."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "2+ Years Experience",
+      "context": "In cloud infrastructure, automation, and CI/CD across 5 major cloud providers."
+    },
+    {
+      "title": "Multi-Cloud Mastery",
+      "context": "Hands-on experience with AWS, Azure, GCP, OCI, and Alibaba Cloud."
+    },
+    {
+      "title": "6 Professional Certifications",
+      "context": "Including GCP Associate Cloud Engineer, GCP Professional Cloud DevOps Engineer, and Azure Administrator."
+    }
+  ],
+  "projects": [
+    {
+      "title": "FINOMICS – Multi-Cloud Cost Management Platform",
+      "stack": "AWS, Azure, GCP, Oracle Cloud (OCI), Alibaba Cloud, Terraform, Python, Bash, Slack APIs",
+      "dates": "2025 - Present",
+      "bullets": [
+        "Designed secure onboarding workflows using least-privilege IAM across five cloud providers.",
+        "Automated cost data ingestion from AWS CUR, Azure Cost Management, GCP Billing, OCI FOCUS Reports, and Alibaba Cloud Cost Explorer.",
+        "Built Terraform-based scalable infrastructure to support multi-cloud integrations.",
+        "Developed scripts for daily, monthly, and anomaly-based cost analysis with real-time Slack alerts."
+      ]
+    },
+    {
+      "title": "ARISTOCRAT – Disaster Recovery Architecture (GCP)",
+      "stack": "Google Cloud Platform, Terraform, Chaos Toolkit, Python",
+      "dates": "2024",
+      "bullets": [
+        "Designed and implemented multi-region disaster recovery architecture to ensure business continuity.",
+        "Built reusable Terraform modules for automated and repeatable DR infrastructure provisioning.",
+        "Implemented Chaos Toolkit to simulate failure scenarios and validate system resilience.",
+        "Automated backup, failover, and recovery workflows for production readiness."
+      ]
+    },
+    {
+      "title": "GUNDERSON – Cloud Security & Governance Assessment",
+      "stack": "AWS, Azure, GCP cloud, Terraform, IAM, Security & Compliance Tools",
+      "dates": "2024",
+      "bullets": [
+        "Conducted comprehensive cloud security and governance assessments across multi-cloud environments.",
+        "Identified gaps in IAM, networking, logging, monitoring, and compliance.",
+        "Delivered an actionable remediation roadmap aligned with industry best practices.",
+        "Recommended Infrastructure as Code (IaC) adoption for standardized and secure deployments."
+      ]
+    },
+    {
+      "title": "PRAMA – Multi-Cloud Asset Management Platform",
+      "stack": "AWS, Azure, GCP, Terraform, Azure DevOps, Kubernetes",
+      "dates": "2024",
+      "bullets": [
+        "Designed and maintained Terraform modules for infrastructure provisioning across AWS, Azure, and GCP.",
+        "Built and managed Azure DevOps CI/CD pipelines for automated deployments and updates.",
+        "Implemented monitoring and performance optimizations to improve reliability and availability.",
+        "Ensured cloud cost efficiency and resource optimization across environments."
+      ]
+    },
+    {
+      "title": "MGM RESORTS – Cloud Infrastructure Assessment & Automation (GCP)",
+      "stack": "Google Cloud Platform, Terraform, IAM, Networking, Logging & Monitoring",
+      "dates": "2024",
+      "bullets": [
+        "Performed a detailed assessment of GCP infrastructure focusing on security, scalability, and cost optimization.",
+        "Conducted gap analysis aligned with Cloud Foundations best practices.",
+        "Developed Terraform-based automation blueprints for governance and standardized provisioning.",
+        "Created a strategic roadmap for secure, scalable, and cost-effective cloud infrastructure evolution."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "Languages",
+      "items": ["Bash", "Shell", "Python"]
+    },
+    {
+      "group": "Cloud & DevOps",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Azure DevOps",
+        "Terraform",
+        "CloudFormation",
+        "Helm",
+        "Ansible"
+      ]
+    },
+    {
+      "group": "AWS Services",
+      "items": [
+        "EC2",
+        "EKS",
+        "ECS",
+        "S3",
+        "CloudFront",
+        "Route 53",
+        "ALB / ELB",
+        "Lambda",
+        "IAM",
+        "Secrets Manager",
+        "API Gateway",
+        "CodeCommit",
+        "CloudWatch",
+        "Cost & Usage Reports (CUR)"
+      ]
+    },
+    {
+      "group": "Azure Services",
+      "items": [
+        "AKS",
+        "App Service",
+        "Azure Functions",
+        "Azure Container Registry (ACR)",
+        "Virtual Machines",
+        "VNET",
+        "WAF",
+        "Front Door",
+        "Storage Accounts",
+        "Key Vault",
+        "Azure Monitor",
+        "Microsoft 365 & SharePoint Admin"
+      ]
+    },
+    {
+      "group": "GCP Services",
+      "items": [
+        "GKE",
+        "Anthos",
+        "Compute Engine",
+        "Cloud Storage",
+        "Cloud Run",
+        "Cloud Functions",
+        "Pub/Sub",
+        "BigQuery",
+        "Cloud SQL",
+        "Firestore",
+        "Artifact Registry",
+        "Load Balancer",
+        "Cloud Armor",
+        "IAM",
+        "VPC",
+        "Security Command Center"
+      ]
+    },
+    {
+      "group": "Monitoring & Observability",
+      "items": [
+        "Prometheus",
+        "Grafana",
+        "Victoria Metrics",
+        "AWS CloudWatch",
+        "Azure Monitor",
+        "GCP Logs Explorer"
+      ]
+    },
+    {
+      "group": "FinOps & Cost Management",
+      "items": [
+        "FinOps Practices",
+        "AWS CUR",
+        "Azure Cost Management",
+        "GCP Billing",
+        "Kubecost",
+        "Cost Optimization",
+        "Anomaly Detection"
+      ]
+    },
+    {
+      "group": "Backup & Disaster Recovery",
+      "items": [
+        "Veeam Backup & Replication",
+        "Snapshot & Backup Automation",
+        "Multi-Region Disaster Recovery"
+      ]
+    },
+    {
+      "group": "Databases",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "Cloud SQL",
+        "Cloud Firestore",
+        "AWS Redshift",
+        "AWS Athena"
+      ]
+    },
+    {
+      "group": "Tools & Platforms",
+      "items": [
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "Visual Studio Code",
+        "Linux (Ubuntu)",
+        "Apache",
+        "Nginx",
+        "Tomcat"
+      ]
+    },
+    {
+      "group": "Transferable Skills",
+      "items": [
+        "Project Management",
+        "Agile & Scrum",
+        "Problem Solving",
+        "Time Management",
+        "Cross-team Collaboration",
+        "Communication Skills",
+        "Ownership & Accountability"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "CHARUSAT University, Changa, Anand, INDIA",
+      "degree": "Bachelor of Technology, Information Technology",
+      "dates": "Sep 2020 – May 2024",
+      "details": "CGPA: 3.4/4.0 Or 8.5/10"
+    }
+  ],
+  "certifications": [
+    "GCP – Associate Cloud Engineer",
+    "GCP – Professional Cloud DevOps Engineer",
+    "Azure Administrator – AZ-104",
+    "Ethical Hacking Essentials – EC-Council",
+    "Network Defense Essentials – EC-Council",
+    "Digital Forensics Essentials – EC-Council"
+  ],
+  "awards": [],
+  "extra": []
+}
