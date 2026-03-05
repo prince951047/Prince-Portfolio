@@ -1,15 +1,20 @@
-import React from "react";
-import { motion } from "motion/react";
-import { ChevronDown, Download, Terminal } from "lucide-react";
-import resumeData from "../data/resume.json";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
+import { ChevronDown, Download, Terminal } from 'lucide-react';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import { ResumePDF } from './ResumePDF';
+import resumeData from '../data/resume.json';
 
 export default function Hero() {
   const { name, title, summary } = resumeData.basics;
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const scrollToExperience = () => {
-    document
-      .getElementById("experience")
-      ?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -27,16 +32,9 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-4">
-            {name.split(" ").map((part, i) => (
-              <span
-                key={i}
-                className={
-                  i === 1
-                    ? "text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400"
-                    : ""
-                }
-              >
-                {part}{" "}
+            {name.split(' ').map((part, i) => (
+              <span key={i} className={i === 1 ? 'text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400' : ''}>
+                {part}{' '}
               </span>
             ))}
           </h1>
@@ -56,26 +54,26 @@ export default function Hero() {
             >
               <span className="relative z-10 flex items-center gap-2">
                 View Experience
-                <ChevronDown
-                  size={18}
-                  className="transition-transform group-hover:translate-y-1"
-                />
+                <ChevronDown size={18} className="transition-transform group-hover:translate-y-1" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-200 to-cyan-200 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
 
-            <a
-              href="/Prince_Patel_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900/50 hover:bg-slate-800 text-white border border-white/10 rounded-full font-medium transition-all hover:border-white/20 w-full sm:w-auto backdrop-blur-sm"
-            >
-              <Download
-                size={18}
-                className="text-slate-400 group-hover:text-white transition-colors"
-              />
-              Download Resume
-            </a>
+            {isClient && (
+              <PDFDownloadLink
+                document={<ResumePDF />}
+                fileName="Prince_Patel_Resume.pdf"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900/50 hover:bg-slate-800 text-white border border-white/10 rounded-full font-medium transition-all hover:border-white/20 w-full sm:w-auto backdrop-blur-sm"
+              >
+                {/* @ts-ignore */}
+                {({ loading }) => (
+                  <>
+                    <Download size={18} className="text-slate-400 group-hover:text-white transition-colors" />
+                    {loading ? 'Generating PDF...' : 'Download Resume'}
+                  </>
+                )}
+              </PDFDownloadLink>
+            )}
           </div>
         </motion.div>
       </div>
@@ -87,12 +85,10 @@ export default function Hero() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500"
       >
-        <span className="text-xs font-mono uppercase tracking-widest">
-          Scroll
-        </span>
+        <span className="text-xs font-mono uppercase tracking-widest">Scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
           className="w-[1px] h-12 bg-gradient-to-b from-slate-500 to-transparent"
         />
       </motion.div>
