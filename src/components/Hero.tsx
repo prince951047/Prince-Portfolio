@@ -12,12 +12,6 @@ export default function Hero() {
       ?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleDownload = () => {
-    // In a real app, this would point to a PDF file or generate one.
-    // For now, we'll just alert or open a new tab with a print view.
-    window.print();
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-6 overflow-hidden">
       <div className="max-w-5xl mx-auto w-full z-10">
@@ -70,8 +64,10 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-200 to-cyan-200 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
 
-            <button
-              onClick={handleDownload}
+            <a
+              href="/Prince_Patel_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900/50 hover:bg-slate-800 text-white border border-white/10 rounded-full font-medium transition-all hover:border-white/20 w-full sm:w-auto backdrop-blur-sm"
             >
               <Download
@@ -79,7 +75,7 @@ export default function Hero() {
                 className="text-slate-400 group-hover:text-white transition-colors"
               />
               Download Resume
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
