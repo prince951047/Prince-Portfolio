@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ChevronDown, Download, Terminal } from 'lucide-react';
+import { ChevronDown, Download, Terminal, Cloud, Shield, Database, Cpu, Server, Lock } from 'lucide-react';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import { ResumePDF } from './ResumePDF';
 import resumeData from '../data/resume.json';
+
+const FloatingIcon = ({ icon: Icon, color, className, delay, size = 32 }: any) => (
+  <motion.div
+    animate={{ y: [-15, 15, -15], rotate: [-5, 5, -5] }}
+    transition={{ duration: 5 + delay, repeat: Infinity, ease: "easeInOut", delay }}
+    className={`absolute p-4 bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl ${className}`}
+  >
+    <Icon size={size} className={color} />
+  </motion.div>
+);
 
 export default function Hero() {
   const { name, title, summary } = resumeData.basics;
@@ -19,7 +29,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-6 overflow-hidden">
-      <div className="max-w-5xl mx-auto w-full z-10">
+      <div className="max-w-7xl mx-auto w-full z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,6 +85,53 @@ export default function Hero() {
               </PDFDownloadLink>
             )}
           </div>
+        </motion.div>
+
+        {/* Right side graphic */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="hidden lg:flex relative h-[600px] w-full items-center justify-center"
+        >
+          {/* Central glowing orbs */}
+          <div className="absolute w-72 h-72 bg-emerald-500/20 rounded-full blur-[100px]" />
+          <div className="absolute w-56 h-56 bg-cyan-500/20 rounded-full blur-[80px] translate-x-10 translate-y-10" />
+          
+          {/* Central Core */}
+          <motion.div 
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="relative z-10 p-10 bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-[2rem] shadow-2xl"
+          >
+            <Cloud size={100} className="text-emerald-400 drop-shadow-[0_0_25px_rgba(52,211,153,0.6)]" />
+          </motion.div>
+
+          {/* Floating Icons */}
+          <FloatingIcon icon={Shield} color="text-cyan-400" className="top-[15%] left-[15%]" delay={0} size={36} />
+          <FloatingIcon icon={Server} color="text-violet-400" className="top-[20%] right-[15%]" delay={1.5} size={32} />
+          <FloatingIcon icon={Database} color="text-amber-400" className="bottom-[20%] left-[20%]" delay={2.5} size={40} />
+          <FloatingIcon icon={Cpu} color="text-rose-400" className="bottom-[25%] right-[20%]" delay={1} size={36} />
+          <FloatingIcon icon={Lock} color="text-blue-400" className="top-[45%] left-[5%]" delay={3} size={28} />
+          <FloatingIcon icon={Terminal} color="text-emerald-400" className="top-[55%] right-[5%]" delay={2} size={32} />
+          
+          {/* Connecting lines (decorative) */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" style={{ zIndex: 0 }}>
+            <motion.circle 
+              cx="50%" cy="50%" r="180" 
+              fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" 
+              className="text-emerald-400"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.circle 
+              cx="50%" cy="50%" r="260" 
+              fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="2 6" 
+              className="text-cyan-400"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+            />
+          </svg>
         </motion.div>
       </div>
 
